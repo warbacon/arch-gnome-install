@@ -24,10 +24,17 @@ done < "$PACKAGES_FILE"
 
 # Install packages and enable gdm
 pacman -S --noconfirm "${packages[@]}" || exit 1
-systemctl enable gdm
+systemctl enable gdm.service
 
-# Detect if using a Vmware VM
-if [[ "$(systemd-detect-virt)" = "vmware" ]]; then
-    pacman -S --noconfirm open-vm-tools gtkmm3
-    systemctl enable vmtoolsd
-fi
+
+# Detect if using a Vmware or VirtualBox VM
+case "$(systemd-detect-virt)" in
+    "vmware")
+        pacman -S --noconfirm open-vm-tools gtkmm3
+        systemctl enable vmtoolsd.service
+        ;;
+    "oracle")
+        pacman -S --noconfirm virtualbox-guest-utils
+        systemctl enable vboxservice.service
+        ;;
+esac
