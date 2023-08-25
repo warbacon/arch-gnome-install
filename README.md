@@ -17,9 +17,3 @@ You can read the packages to be installed in the ``packages.txt`` file of this s
     ```sh
     sudo ./install.sh
     ```
-
-## Notice
-
-Currently the wallpapers provided by gnome are not installed because a small bug occurs when restarting the computer. Installing the ``gnome`` package fixes it, but since that takes the fun out of this project, I'm investigating what specific package is needed to stop this bug from occurring.
-
-You can install ``gnome-backgrounds`` manually and see what I mean, and if you manage to fix it, please let me know!
