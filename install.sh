@@ -15,6 +15,7 @@ if [ ! -f "$PACKAGES_FILE" ]; then
     exit 1
 fi
 
+# Load required packages from packages.txt
 packages=()
 
 while IFS= read -r package; do
@@ -22,7 +23,11 @@ while IFS= read -r package; do
 done < "$PACKAGES_FILE"
 
 # Install packages and enable gdm
-pacman -S "${packages[@]}" || exit 1
+pacman -S --noconfirm "${packages[@]}" || exit 1
 systemctl enable gdm
 
-echo "Packages installed and gdm enabled."
+# Detect if using a Vmware VM
+if [[ "$(systemd-detect-virt)" = "vmware" ]]; then
+    pacman -S --noconfirm open-vm-tools gtkmm3
+    systemctl enable vmtoolsd
+fi
