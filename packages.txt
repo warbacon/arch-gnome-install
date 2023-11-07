@@ -1,5 +1,4 @@
 celluloid
-eog
 evince
 gdm
 gnome-backgrounds
@@ -27,6 +26,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+loupe
 malcontent
 nautilus
 orca
