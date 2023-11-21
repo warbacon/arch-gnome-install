@@ -5,6 +5,7 @@ gnome-backgrounds
 gnome-calculator
 gnome-characters
 gnome-color-manager
+gnome-console
 gnome-control-center
 gnome-disk-utility
 gnome-font-viewer
@@ -14,7 +15,6 @@ gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
 gnome-shell
-gnome-terminal
 gnome-user-share
 grilo-plugins
 gst-plugins-good
@@ -33,5 +33,7 @@ orca
 power-profiles-daemon
 rygel
 sushi
+tecla
+tracker3-miners
 xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
