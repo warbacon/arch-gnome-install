@@ -7,12 +7,12 @@ gnome-control-center
 gnome-disk-utility
 gnome-font-viewer
 gnome-logs
-gnome-remote-desktop
 gnome-shell
 gnome-terminal
 gst-plugins-good
 gvfs-google
 loupe
+malcontent
 nautilus
 power-profiles-daemon
 sushi
