@@ -1,5 +1,10 @@
 # Minimal installation of GNOME on Arch Linux
 
+> [!IMPORTANT]
+> This project has been deprecated in favor of 
+> [quick-arch](https://github.com/warbacon/quick-arch), since it has the same
+> functionality plus some extra features.
+
 You can read the packages to be installed in the ``packages.txt`` file of this same repository
 
 ## Instructions
